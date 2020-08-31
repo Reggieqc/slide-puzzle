@@ -1,0 +1,38 @@
+Html Webpack Plugin:
+<pre>
+  Error: /Users/admin/Desktop/mediamonks/node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js?:93
+    var style = document.createElement('style');
+                ^
+  ReferenceError: document is not defined
+  
+  - injectStylesIntoStyleTag.js?:93 insertStyleElement
+    [.]/[style-loader]/dist/runtime/injectStylesIntoStyleTag.js?:93:15
+  
+  - injectStylesIntoStyleTag.js?:208 addStyle
+    [.]/[style-loader]/dist/runtime/injectStylesIntoStyleTag.js?:208:13
+  
+  - injectStylesIntoStyleTag.js?:81 modulesToDom
+    [.]/[style-loader]/dist/runtime/injectStylesIntoStyleTag.js?:81:18
+  
+  - injectStylesIntoStyleTag.js?:239 module.exports
+    [.]/[style-loader]/dist/runtime/injectStylesIntoStyleTag.js?:239:25
+  
+  - main.scss?:15 eval
+    /Users/admin/Desktop/mediamonks/src/styles/main.scss?:15:14
+  
+  - bundle.js?:343 Object../src/styles/main.scss
+    /Users/admin/Desktop/mediamonks/dist/bundle.js?:343:5
+  
+  - bundle.js?:54 __webpack_require__
+    /Users/admin/Desktop/mediamonks/dist/bundle.js?:54:23
+  
+  - index.ts?:3 eval
+    /Users/admin/Desktop/mediamonks/src/index.ts?:3:75
+  
+  - bundle.js?:329 Module../src/index.ts
+    /Users/admin/Desktop/mediamonks/dist/bundle.js?:329:5
+  
+  - bundle.js?:54 __webpack_require__
+    /Users/admin/Desktop/mediamonks/dist/bundle.js?:54:23
+  
+</pre>
