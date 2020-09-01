@@ -19,6 +19,8 @@ export default class Puzzleblock {
             this.isEmpty = true;
             this.el.style.backgroundImage = `url(src/assets/images/monk.png)`;
             this.el.style.backgroundSize = 'contain';
+            this.el.style.backgroundRepeat = 'no-repeat';
+            this.el.style.backgroundPosition = 'center center';
             return;
         }
         this.setBackgroundBlock()

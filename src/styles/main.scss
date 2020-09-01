@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'klavika-bold';
     src: url('../assets/fonts/klavika-bold-webfont.woff') format('woff')
@@ -158,23 +157,100 @@ html * {
 
 
 body {
-    overflow: hidden;
-    background: url('../assets/images/background.jpg');
+    overflow-x: hidden;
+    background: url('../assets/images/background.jpg') no-repeat;
     background-size: contain;
     background-color: #1a1a1a;
     font-family: $primary-font-regular;
+    position: relative;
+    min-height: 100vh;
+    padding: 0 2em;
+    padding-top: 12em;
+    background-attachment: fixed;
+    padding-bottom: 7em;
+
+    h1 {
+        background: url('../assets/images/logo.svg') no-repeat;
+        background-size: contain;
+        background-position: center center;
+        width: 7%;
+        height: 150px;
+        filter: invert(1);
+        text-indent: -10000000px;
+        position: fixed;
+        top: 0;
+        right: 2em;
+        z-index: 2;
+    }
+
+    .h2-style {
+        position: relative;
+
+        h2 {
+            font-family: $primary-font-bold;
+            color: #fff;
+            text-transform: uppercase;
+            margin-top: 1em;
+            font-size: 5em;
+            letter-spacing: 1px;
+        }
+    }
+
+
+    .info-container {
+        width: 50%;
+        margin-top: 4em;
+        padding-left: 5.3em;
+
+        h3 {
+            font-family: $primary-font-regular;
+            font-style: italic;
+            color: #fff;
+            letter-spacing: 1px;
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.1em;
+            letter-spacing: 0.6px;
+            line-height: 1.9;
+            font-family: $primary-font-light;
+        }
+    }
 }
 
 #puzzle-img {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 11em;
+
+    .title {
+        display: flex;
+        align-items: center;
+        margin-top: 1em;
+
+        img {
+            width: 45px;
+            padding-left: 19px;
+        }
+
+        h3 {
+            font-family: $primary-font-bold;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 4em;
+            letter-spacing: 1px;
+
+        }
+    }
+
 }
 
-.overlay-shadow{
+.overlay-shadow {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -182,7 +258,51 @@ body {
     left: 50%;
     border: 1px solid var(--border-color);
     transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) -9%, #08080e 30%);
+    z-index: -1;
+}
 
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 11%, rgba(10, 10, 12, 1) 40%);
-    z-index: 0;
+.guidelines-decoration {
+    &:after {
+        content: "|";
+        text-indent: -10000px;
+        width: 100vw;
+        height: 0.2px;
+        bottom: -26px;
+        position: absolute;
+        left: -2em;
+        top: unset;
+        background: #353535;
+    }
+
+    &.left {
+        &:after {
+            left: 5em;
+            z-index: 0;
+            top: 0;
+            height: 100%;
+            width: 0.2px;
+        }
+    }
+
+    &.right {
+        &:after {
+            right: 5em;
+            z-index: 0;
+            top: 0;
+            height: 100%;
+            width: 0.2px;
+        }
+    }
+}
+
+button {
+    background: #1a1a1a;
+    color: #666;
+    border: 0;
+    height: 80px;
+    text-transform: uppercase;
+    min-width: 150px;
+    letter-spacing: 2px;
+    cursor: pointer;
 }

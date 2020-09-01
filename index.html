@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
-    <div class="overlay-shadow">
-        
+  </head>
+  <body>
+    <div class="guidelines-decoration left"></div>
+    <div class="guidelines-decoration right"></div>
+
+    <div class="overlay-shadow"></div>
+    <h1>mediamonks</h1>
+    <div class="h2-style">
+      <h2>Front End challenge</h2>
+      <div class="guidelines-decoration"></div>
     </div>
-    <input id="input" value="4" name="dimensions" type="number">
+    <div class="info-container">
+      <h3>Scriptting Requirements :</h3>
+      <p>
+        The exercise is to implement a Sliding puzzle game. Requirements: This
+        is a bi-dimensional puzzle (4x4). Each piece can move in 4 directions
+        (up, down, left, right). At the start all pieces are scrambled. Movement
+        of a piece is just possible when there is an empty cell next to it. Just
+        one movement is possible each time. Game ends when all pieces are in the
+        right position, showing the image clearly. You are provided with an
+        image to use for the test. You can’t use jQuery! If you need to use any
+        other external resource (framework, library, code snippet, etc.), please
+        justify why they were used and chosen in the first place. And provide a
+        link to the resource you used.
+      </p>
+    </div>
     <div id="puzzle-img">
-        <button id="button">Shuffle</button>
+        <div class="title">
+            <h3>The Puzzle</h3>
+            <img src="src/assets/images/favicon.ico" alt="">
+        </div>
+      <input id="input" value="4" name="dimensions" type="number" />
+      <button id="button">Shuffle</button>
     </div>
     <script src="../dist/bundle.js"></script>
-</body>
-
+  </body>
 </html>
