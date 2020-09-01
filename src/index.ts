@@ -18,6 +18,9 @@ buttonElement.addEventListener('click', randomShufflePuzzle);
 
 function getInputValue(event: Event) {
     inputValue = Number((<HTMLInputElement>event.target).value);
+    if( inputValue < 4) {
+        inputValue = 4;
+    };
     setPuzzleImageDimensions();
 };
 
