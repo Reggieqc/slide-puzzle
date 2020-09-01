@@ -23,6 +23,9 @@ $primary-font-light: 'klavika-light';
 $primary-font-medium: 'klavika-medium';
 $primary-font-bold: 'klavika-bold';
 
+$white: #fff;
+$primary-color: #666;
+
 /*-------------------------------
 		0.-CSS RESET
 --------------------------------*/
@@ -188,7 +191,7 @@ body {
 
         h2 {
             font-family: $primary-font-bold;
-            color: #fff;
+            color: $white;
             text-transform: uppercase;
             margin-top: 1em;
             font-size: 5em;
@@ -205,14 +208,14 @@ body {
         h3 {
             font-family: $primary-font-regular;
             font-style: italic;
-            color: #fff;
+            color: $white;
             letter-spacing: 1px;
             font-size: 2em;
             margin-bottom: 0.5em;
         }
 
         p {
-            color: #fff;
+            color: $white;
             font-size: 1.1em;
             letter-spacing: 0.6px;
             line-height: 1.9;
@@ -241,7 +244,7 @@ body {
 
         h3 {
             font-family: $primary-font-bold;
-            color: #fff;
+            color: $white;
             text-transform: uppercase;
             font-size: 4em;
             letter-spacing: 1px;
@@ -251,7 +254,7 @@ body {
 
     .dimensions {
         label {
-            color: #666;
+            color: $primary-color;
             font-family: $primary-font-light;
             font-size: 1.1em;
             margin-right: 0.8em;
@@ -261,7 +264,7 @@ body {
             background: transparent;
             height: 42px;
             border-radius: 20px;
-            color: #666;
+            color: $primary-color;
             font-size: 1.2em;
             text-align: center;
             border: 0;
@@ -321,7 +324,7 @@ body {
 
 button {
     background: #1a1a1a;
-    color: #666;
+    color: $primary-color;
     border: 0;
     height: 80px;
     text-transform: uppercase;
@@ -330,14 +333,3 @@ button {
     cursor: pointer;
     margin: 2em 0;
 }
-
-footer{
-    position:fixed;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:200px;
-    background:#000;
-    color:#fff;
-    z-index:-1;
-  }
