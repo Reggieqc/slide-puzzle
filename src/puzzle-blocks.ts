@@ -18,7 +18,7 @@ export default class Puzzleblock {
     if (this.index === this.puzzle.dimensions * this.puzzle.dimensions - 1) {
       this.isEmpty = true;
       return;
-    }
+    };
     this.setBackgroundBlock();
   }
 
@@ -42,13 +42,13 @@ export default class Puzzleblock {
       }
     };
     return div;
-  }
+  };
 
   setPosition(index: number): void {
     const { left, top } = this.getPositionFromIndex(index);
     this.el.style.left = `${left}px`;
     this.el.style.top = `${top}px`;
-  }
+  };
 
   setBackgroundBlock(): void {
     const { x, y } = this.getCoordinatesXY(this.index);
@@ -56,7 +56,7 @@ export default class Puzzleblock {
     const top = this.height * y;
     this.el.style.backgroundImage = `url(${this.puzzle.imgSrc})`;
     this.el.style.backgroundPosition = `-${left}px -${top}px`;
-  }
+  };
 
   getPositionFromIndex(index: number): CoordinatePosition {
     const { x, y } = this.getCoordinatesXY(index);
@@ -64,22 +64,22 @@ export default class Puzzleblock {
       left: this.width * x,
       top: this.height * y,
     };
-  }
+  };
 
   getCoordinatesXY(index: number): CartesianCoordinates {
     return {
       x: index % this.puzzle.dimensions,
       y: Math.floor(index / this.puzzle.dimensions),
     };
-  }
-}
+  };
+};
 
 interface CoordinatePosition {
   left: number;
   top: number;
-}
+};
 
 interface CartesianCoordinates {
   x: number;
   y: number;
-}
+};

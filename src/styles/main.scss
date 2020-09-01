@@ -230,7 +230,19 @@ body {
     justify-content: center;
     flex-direction: column;
     margin-top: 11em;
+    position: relative;
 
+    .result {
+        width: 20%;
+        position: absolute;
+        top: 48%;
+        right: 0;
+        transform: translateY(-50%);
+
+        img {
+            width: 100%;
+        }
+    }
     .title {
         display: flex;
         align-items: center;

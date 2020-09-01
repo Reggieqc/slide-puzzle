@@ -3,12 +3,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path')
 
 module.exports = {
-    // context: __dirname,
+    context: __dirname,
     entry: './src/index.ts',
     output: {
-        path: path.join(__dirname , 'dist/'), 
+        path: path.resolve(__dirname , 'dist/'), 
         filename: 'bundle.js',
-        // publicPath:'/'
+        publicPath:'/'
     },
     devServer: {
         port: 8080
@@ -40,7 +40,7 @@ module.exports = {
             //     }]
             // },
             {
-                test: /\.(png|svg|jpg|gif)$/,
+                test: /\.(png|svg|jpg|gif|ico)$/,
                 use: [
                    'file-loader'
                 ]
@@ -68,7 +68,8 @@ module.exports = {
     plugins: [
         new HtmlWebPackPlugin({
             template: "./index.html",
-            filename: "./index.html"
+            filename: "./index.html",
+            favicon:"./src/favicon.ico"
         }),
         new MiniCssExtractPlugin({
             filename:"[name].css",
