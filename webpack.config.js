@@ -1,14 +1,17 @@
-// const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path')
 
 module.exports = {
-    context: __dirname,
+    // context: __dirname,
     entry: './src/index.ts',
     output: {
-        path: path.resolve(__dirname , 'dist/'), 
+        path: path.join(__dirname , 'dist/'), 
         filename: 'bundle.js',
-        publicPath:'/'
+        // publicPath:'/'
+    },
+    devServer: {
+        port: 8080
     },
     module: {
         rules: [
@@ -63,10 +66,10 @@ module.exports = {
         extensions: ['.ts','.js'],
     },
     plugins: [
-        // new HtmlWebPackPlugin({
-        //     template: "./src/index.html",
-        //     filename: "./index.html"
-        // }),
+        new HtmlWebPackPlugin({
+            template: "./index.html",
+            filename: "./index.html"
+        }),
         new MiniCssExtractPlugin({
             filename:"[name].css",
             chunkFilename: "[id].css"

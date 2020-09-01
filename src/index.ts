@@ -9,7 +9,7 @@ const puzzleImage = new PuzzleImage(
     inputValue,
     document.querySelector('#puzzle-img'),
     'src/assets/images/monks.jpg',
-    400,
+    600,
 )
 
 inputElement.addEventListener('change', getInputValue);

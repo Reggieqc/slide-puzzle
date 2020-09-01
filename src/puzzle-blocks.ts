@@ -1,13 +1,13 @@
-import PictureImage from "./puzzle-image";
+import PuzzleImage from "./puzzle-image";
 
 export default class Puzzleblock {
     index: number;
-    puzzle: PictureImage;
+    puzzle: PuzzleImage;
     width: number;
     height: number;
     el: HTMLElement;
     isEmpty: boolean;
-    constructor(puzzle: PictureImage, index: number) {
+    constructor(puzzle: PuzzleImage, index: number) {
         this.isEmpty = false;
         this.index = index;
         this.puzzle = puzzle;
@@ -32,11 +32,22 @@ export default class Puzzleblock {
         div.style.position = 'absolute';
         div.style.width = `${this.width}px`;
         div.style.height = `${this.height}px`;
-        div.style.border = '1px solid #333';
+        div.style.border = '1px solid #666';
+        div.style.cursor = 'not-allowed';
+        div.onmouseover = () => {
+            const currentBlockIndex = this.puzzle.findBlockPosition(this.index);
+            const emptyBlockIndex = this.puzzle.findEmptyBlockPosition();
+            const { x, y } = this.getCoordinatesXY(currentBlockIndex);    
+            const { x: emptyX, y: emptyY } = this.getCoordinatesXY(emptyBlockIndex);
+            if ((x === emptyX || y === emptyY) &&
+                (Math.abs(x - emptyX) === 1 || Math.abs(y - emptyY) === 1)) {
+                div.style.cursor = 'pointer';
+            }
+        }
         div.onclick = () => {
             const currentBlockIndex = this.puzzle.findBlockPosition(this.index);
             const emptyBlockIndex = this.puzzle.findEmptyBlockPosition();
-            const { x, y } = this.getCoordinatesXY(currentBlockIndex);
+            const { x, y } = this.getCoordinatesXY(currentBlockIndex);    
             const { x: emptyX, y: emptyY } = this.getCoordinatesXY(emptyBlockIndex);
             if ((x === emptyX || y === emptyY) &&
                 (Math.abs(x - emptyX) === 1 || Math.abs(y - emptyY) === 1)) {

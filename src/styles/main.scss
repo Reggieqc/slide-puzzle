@@ -232,6 +232,7 @@ body {
         display: flex;
         align-items: center;
         margin-top: 1em;
+        margin-bottom: 2em;
 
         img {
             width: 45px;
@@ -245,6 +246,28 @@ body {
             font-size: 4em;
             letter-spacing: 1px;
 
+        }
+    }
+
+    .dimensions {
+        label {
+            color: #666;
+            font-family: $primary-font-light;
+            font-size: 1.1em;
+            margin-right: 0.8em;
+        }
+
+        input {
+            background: transparent;
+            height: 42px;
+            border-radius: 20px;
+            color: #666;
+            font-size: 1.2em;
+            text-align: center;
+            border: 0;
+            border-bottom: 1px solid;
+            width: 55px;
+            height: 1em;
         }
     }
 
@@ -305,4 +328,16 @@ button {
     min-width: 150px;
     letter-spacing: 2px;
     cursor: pointer;
+    margin: 2em 0;
 }
+
+footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:200px;
+    background:#000;
+    color:#fff;
+    z-index:-1;
+  }

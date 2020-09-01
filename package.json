@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "build": "webpack",
-    "start:dev": "webpack-dev-server",
-    "dev": "webpack --watch --mode development",
+    "build": "webpack -p",
+    "dev": "webpack-dev-server -d",
     "prod": "webpack --mode production"
   },
   "keywords": [],
