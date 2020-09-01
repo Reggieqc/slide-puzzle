@@ -30,15 +30,15 @@ module.exports = {
 
                 }
             },
-            // {
-            //     test: /\.html$/,
-            //     use: [{
-            //         loader: 'html-loader',
-            //         options: {
-            //             minimize: true
-            //         }
-            //     }]
-            // },
+            {
+                test: /\.html$/,
+                use: [{
+                    loader: 'html-loader',
+                    options: {
+                        minimize: true
+                    }
+                }]
+            },
             {
                 test: /\.(png|svg|jpg|gif|ico)$/,
                 use: [
